@@ -1,0 +1,150 @@
+:root {
+    --bg-color: #fdf2f8;
+    --primary: #FF78C4;
+    --primary-hover: #FF5CA8;
+    --text: #594a4e;
+    --white: #ffffff;
+    --shadow: rgba(255, 120, 196, 0.4);
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text);
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+.component-group {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(255, 120, 196, 0.15);
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* --- Bouncy Jelly Button --- */
+.kawaii-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-family: 'Fredoka', sans-serif;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px var(--shadow);
+    transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.kawaii-btn:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.05);
+}
+
+.kawaii-btn:active {
+    transform: scale(0.95) translateY(2px);
+}
+
+/* --- Soft Glassmorphism Card --- */
+.glass-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 200px;
+    margin: 0 auto;
+    color: var(--text);
+    box-shadow: 0 8px 32px 0 rgba(255, 120, 196, 0.15);
+}
+
+.glass-card h3 {
+    margin-top: 0;
+    color: var(--primary);
+}
+
+/* --- Neon Glow Toggle --- */
+.neon-toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.neon-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e4e4e4;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input:checked+.slider {
+    background-color: var(--primary);
+    box-shadow: 0 0 15px var(--primary);
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+/* --- Pastel Badge --- */
+.pastel-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: #FFB3E6;
+    color: #8c4b6f;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 5px;
+    border: 2px solid white;
+    box-shadow: 0 2px 8px rgba(255, 179, 230, 0.4);
+}
+
+.pastel-badge.blue {
+    background-color: #B3E5FC;
+    color: #447a96;
+    box-shadow: 0 2px 8px rgba(179, 229, 252, 0.4);
+}
