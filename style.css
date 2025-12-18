@@ -302,3 +302,13 @@ input:checked+.slider:before {
 .fab-btn:active {
     transform: scale(0.9) rotate(90deg);
 }
+
+/* --- Rainbow Divider --- */
+.rainbow-divider {
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #ff9a9e 0%, #fad0c4 20%, #fad0c4 40%, #a18cd1 60%, #fbc2eb 80%, #ff9a9e 100%);
+    border-radius: 4px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
