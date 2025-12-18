@@ -312,3 +312,43 @@ input:checked+.slider:before {
     margin: 20px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* --- Typing Text Effect --- */
+.typing-container {
+    display: inline-block;
+}
+
+.typing-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    color: var(--primary);
+    border-right: 3px solid var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(14, end), blink-caret .75s step-end infinite;
+    width: 14ch;
+    /* Approximate width of text */
+    display: block;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 14ch
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--text)
+    }
+}
