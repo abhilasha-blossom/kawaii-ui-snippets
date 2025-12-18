@@ -415,10 +415,16 @@ input:checked+.slider:before {
     justify-content: center;
 }
 
-to {
-    transform: scale(1);
-    opacity: 1;
-}
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* --- Cute Spinner --- */
@@ -512,4 +518,209 @@ to {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
+}
+
+/* --- Sweet Progress Bar --- */
+.sweet-progress {
+    width: 100%;
+    background-color: #ffe4e1;
+    border-radius: 20px;
+    height: 25px;
+    overflow: hidden;
+    border: 3px solid #ffcdf3;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 70%;
+    background: repeating-linear-gradient(45deg,
+            #FF78C4,
+            #FF78C4 10px,
+            #FFB3E6 10px,
+            #FFB3E6 20px);
+    border-radius: 15px;
+    animation: candy-stripe 2s linear infinite;
+    box-shadow: 0 0 10px rgba(255, 120, 196, 0.4);
+}
+
+@keyframes candy-stripe {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 28px 0;
+    }
+}
+
+/* --- Bread/Toast Notification --- */
+.kawaii-toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #fff0f5;
+    color: var(--text);
+    text-align: center;
+    border-radius: 12px;
+    padding: 15px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    box-shadow: 0 5px 15px rgba(255, 120, 196, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+    border: 2px solid #ffcdf3;
+}
+
+.kawaii-toast.show {
+    visibility: visible;
+    animation: slideInToast 0.5s, fadeOutToast 0.5s 2.5s forwards;
+}
+
+@keyframes slideInToast {
+    from {
+        bottom: 0px;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutToast {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0px;
+        opacity: 0;
+    }
+}
+
+/* --- Cloud Background --- */
+.cloud-showcase {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom, #caecfc, #fdf2f8);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid white;
+}
+
+.cloud {
+    position: absolute;
+    background: white;
+    width: 60px;
+    height: 20px;
+    border-radius: 20px;
+    opacity: 0.9;
+    animation: floatCloud 8s infinite linear;
+}
+
+.cloud::before,
+.cloud::after {
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+.cloud::before {
+    width: 25px;
+    height: 25px;
+    top: -10px;
+    left: 10px;
+}
+
+.cloud::after {
+    width: 30px;
+    height: 30px;
+    top: -15px;
+    left: 25px;
+}
+
+.cloud.c1 {
+    top: 30px;
+    left: -60px;
+    transform: scale(1.2);
+    animation-duration: 12s;
+}
+
+.cloud.c2 {
+    top: 80px;
+    left: -60px;
+    transform: scale(0.8);
+    animation-duration: 9s;
+    animation-delay: 2s;
+}
+
+.cloud.c3 {
+    top: 50px;
+    left: -60px;
+    transform: scale(1.0);
+    animation-duration: 15s;
+    animation-delay: 5s;
+}
+
+@keyframes floatCloud {
+    from {
+        left: -80px;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+/* --- Chibi Avatar --- */
+.chibi-avatar {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 5px 15px rgba(255, 120, 196, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.chibi-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chibi-avatar:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.status-dot {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 18px;
+    height: 18px;
+    background-color: #4CAF50;
+    /* Green for online */
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.status-dot.busy {
+    background-color: #FF5252;
+}
+
+.status-dot.away {
+    background-color: #FFC107;
 }

@@ -19,6 +19,10 @@ This is our master plan to build the cutest UI library ever! Use this list to cr
 8.  **Sparkle Badge**: A notification badge with little CSS sparkles.
 9.  **Rainbow Divider**: A horizontal rule with a pastel gradient.
 10. **Typing Text Effect**: A container that types out text like a typewriter.
+11. **Sweet Progress Bar**: A candy-striped progress bar.
+12. **Bread/Toast Notification**: A cute toast notification that slides in.
+13. **Cloud Background**: Animated floating clouds.
+14. **Chibi Avatar**: A profile picture with a status indicator.
 
 ## 📈 Trophy Boosting Guide
 - **Create an Issue** for each of these items.
