@@ -415,13 +415,54 @@ input:checked+.slider:before {
     justify-content: center;
 }
 
-@keyframes popIn {
-    from {
-        transform: scale(0.8);
-        opacity: 0;
+to {
+    transform: scale(1);
+    opacity: 1;
+}
+}
+
+/* --- Cute Spinner --- */
+.cute-spinner {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    border-radius: 5px;
+    animation: rotate-flower 1.5s infinite ease-in-out;
+    position: relative;
+    margin: 10px auto;
+}
+
+.cute-spinner::before,
+.cute-spinner::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    border-radius: 5px;
+}
+
+.cute-spinner::before {
+    transform: rotate(30deg);
+}
+
+.cute-spinner::after {
+    transform: rotate(60deg);
+}
+
+@keyframes rotate-flower {
+    0% {
+        transform: rotate(0deg) scale(1);
+        background-color: #FFB3E6;
     }
 
-    transform: rotate(360deg) scale(1);
-    background-color: #FFB3E6;
-}
+    50% {
+        transform: rotate(180deg) scale(1.2);
+        background-color: #B3E5FC;
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+        background-color: #FFB3E6;
+    }
 }
