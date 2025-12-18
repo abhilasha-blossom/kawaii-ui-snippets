@@ -466,3 +466,50 @@ to {
         background-color: #FFB3E6;
     }
 }
+
+/* --- Kawaii Tooltip --- */
+.kawaii-tooltip {
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--primary);
+    border-bottom: 2px dashed var(--primary);
+}
+
+.kawaii-tooltip::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: var(--primary);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(255, 120, 196, 0.4);
+}
+
+.kawaii-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    border: 6px solid transparent;
+    border-top-color: var(--primary);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.kawaii-tooltip:hover::before,
+.kawaii-tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
