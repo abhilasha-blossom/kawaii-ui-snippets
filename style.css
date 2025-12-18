@@ -275,3 +275,30 @@ input:checked+.slider:before {
         transform: rotate(-45deg) scale(1);
     }
 }
+
+/* --- Floating Action Button (FAB) --- */
+.fab-btn {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    border: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(255, 120, 196, 0.4);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.fab-btn:hover {
+    transform: scale(1.1) rotate(90deg);
+    background-color: var(--primary-hover);
+    box-shadow: 0 6px 15px rgba(255, 120, 196, 0.6);
+}
+
+.fab-btn:active {
+    transform: scale(0.9) rotate(90deg);
+}
