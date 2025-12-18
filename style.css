@@ -199,3 +199,79 @@ input:checked+.slider:before {
     box-shadow: 0 0 10px rgba(255, 120, 196, 0.4);
     background-color: white;
 }
+
+/* --- Heart Checkbox --- */
+.heart-checkbox {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.heart-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.heart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    background-color: #eee;
+    transform: rotate(-45deg);
+    transition: background-color 0.3s ease;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: inherit;
+    transition: background-color 0.3s ease;
+}
+
+.heart:before {
+    top: -25px;
+    left: 0;
+}
+
+.heart:after {
+    left: 25px;
+    top: 0;
+}
+
+.heart-checkbox input:checked~.heart {
+    background-color: #ff5ca8;
+    animation: heartBeat 0.5s ease-in-out;
+}
+
+@keyframes heartBeat {
+    0% {
+        transform: rotate(-45deg) scale(1);
+    }
+
+    25% {
+        transform: rotate(-45deg) scale(1.1);
+    }
+
+    50% {
+        transform: rotate(-45deg) scale(1);
+    }
+
+    75% {
+        transform: rotate(-45deg) scale(1.2);
+    }
+
+    100% {
+        transform: rotate(-45deg) scale(1);
+    }
+}
