@@ -148,3 +148,34 @@ input:checked+.slider:before {
     color: #447a96;
     box-shadow: 0 2px 8px rgba(179, 229, 252, 0.4);
 }
+
+/* --- Sparkle Badge --- */
+@keyframes sparkle {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.sparkle-badge {
+    background: linear-gradient(45deg, #FFB3E6, #B3E5FC);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(255, 120, 196, 0.3);
+    border: 2px solid white;
+    animation: sparkle 2s infinite ease-in-out;
+    display: inline-block;
+}
