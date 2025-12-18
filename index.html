@@ -128,11 +128,43 @@
             <h2>10. Typing Text Effect</h2>
             <div class="showcase">
                 <div class="typing-container">
-                    <span class="typing-text">Hello World! 🌸</span>
+                    <span class="typing-text">Hello World! </span>
                 </div>
             </div>
             <div class="code-block">
                 <pre><code>&lt;span class="typing-text"&gt;Hello World!&lt;/span&gt;</code></pre>
+            </div>
+        </section>
+
+
+        <section class="component-group">
+            <h2>11. Kawaii Modal</h2>
+            <div class="showcase">
+                <button class="kawaii-btn" onclick="document.getElementById('kawaii-modal').style.display='flex'">Open
+                    Modal</button>
+            </div>
+
+            <div id="kawaii-modal" class="modal-overlay" style="display: none;"
+                onclick="if(event.target === this) this.style.display='none'">
+                <div class="kawaii-modal">
+                    <div class="modal-header">
+                        <h3>✨ Hello There! ✨</h3>
+                        <span class="close-btn"
+                            onclick="document.getElementById('kawaii-modal').style.display='none'">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <p>This is a super cute modal popup! 🌸</p>
+                        <p>You can put anything here.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="kawaii-btn"
+                            onclick="document.getElementById('kawaii-modal').style.display='none'">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-block">
+                <pre><code>&lt;div class="kawaii-modal"&gt;...&lt;/div&gt;</code></pre>
             </div>
         </section>
 
