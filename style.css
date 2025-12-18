@@ -421,8 +421,7 @@ input:checked+.slider:before {
         opacity: 0;
     }
 
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
+    transform: rotate(360deg) scale(1);
+    background-color: #FFB3E6;
+}
 }
