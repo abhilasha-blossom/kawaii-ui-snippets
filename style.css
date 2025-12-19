@@ -724,3 +724,128 @@ input:checked+.slider:before {
 .status-dot.away {
     background-color: #FFC107;
 }
+
+/* 18. Sakura Rain */
+.sakura-rain {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to bottom, #fad0c4 0%, #ffd1ff 100%);
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.petal {
+    position: absolute;
+    background-color: #ffb7b2;
+    border-radius: 150% 0 150% 0;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        opacity: 0;
+        top: -10%;
+        transform: translateX(0) rotate(0deg);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    20% {
+        transform: translateX(-20px) rotate(45deg);
+    }
+
+    40% {
+        transform: translateX(-20px) rotate(90deg);
+    }
+
+    60% {
+        transform: translateX(-20px) rotate(135deg);
+    }
+
+    80% {
+        transform: translateX(-20px) rotate(180deg);
+    }
+
+    100% {
+        top: 110%;
+        transform: translateX(-20px) rotate(225deg);
+    }
+}
+
+.petal:nth-child(1) {
+    left: 10%;
+    width: 15px;
+    height: 15px;
+    animation-duration: 10s;
+    animation-delay: 0s;
+}
+
+.petal:nth-child(2) {
+    left: 20%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 12s;
+    animation-delay: 2s;
+    background-color: #ffcccc;
+}
+
+.petal:nth-child(3) {
+    left: 30%;
+    width: 10px;
+    height: 10px;
+    animation-duration: 8s;
+    animation-delay: 4s;
+}
+
+.petal:nth-child(4) {
+    left: 40%;
+    width: 15px;
+    height: 15px;
+    animation-duration: 11s;
+    animation-delay: 1s;
+}
+
+.petal:nth-child(5) {
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    animation-duration: 13s;
+    animation-delay: 3s;
+    background-color: #ffe4e1;
+}
+
+.petal:nth-child(6) {
+    left: 60%;
+    width: 12px;
+    height: 12px;
+    animation-duration: 9s;
+    animation-delay: 5s;
+}
+
+.petal:nth-child(7) {
+    left: 70%;
+    width: 22px;
+    height: 22px;
+    animation-duration: 14s;
+    animation-delay: 2s;
+}
+
+.petal:nth-child(8) {
+    left: 80%;
+    width: 14px;
+    height: 14px;
+    animation-duration: 10s;
+    animation-delay: 1s;
+    background-color: #fff0f5;
+}
+
+.petal:nth-child(9) {
+    left: 90%;
+    width: 16px;
+    height: 16px;
+    animation-duration: 12s;
+    animation-delay: 4s;
+}

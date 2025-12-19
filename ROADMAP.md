@@ -23,6 +23,7 @@ This is our master plan to build the cutest UI library ever! Use this list to cr
 12. **Bread/Toast Notification**: A cute toast notification that slides in.
 13. **Cloud Background**: Animated floating clouds.
 14. **Chibi Avatar**: A profile picture with a status indicator.
+15. **Sakura Rain**: Falling cherry blossom petals background effect.
 
 ## 📈 Trophy Boosting Guide
 - **Create an Issue** for each of these items.
