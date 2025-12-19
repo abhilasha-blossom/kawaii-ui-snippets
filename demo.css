@@ -22,8 +22,11 @@ h1 {
 /* Bento Grid Layout */
 .bento-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    /* Slightly smaller for better fit */
+    grid-auto-rows: 220px;
+    /* Fixed height for rows */
+    gap: 20px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -38,21 +41,44 @@ h1 {
     box-shadow: 0 10px 25px rgba(255, 120, 196, 0.15);
     text-align: center;
     transition: transform 0.3s ease;
-    height: fit-content;
+    height: 100%;
+    /* Fill the cell */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* Prevent spillover */
 }
 
-.component-group:hover {
-    transform: translateY(-5px);
+/* Explicit Bento Sizes */
+.bento-1x1 {
+    grid-column: span 1;
+    grid-row: span 1;
 }
 
-/* Bento Spans */
-.span-2 {
+.bento-2x1 {
     grid-column: span 2;
+    grid-row: span 1;
+}
+
+.bento-1x2 {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.bento-2x2 {
+    grid-column: span 2;
+    grid-row: span 2;
 }
 
 @media (max-width: 800px) {
-    .span-2 {
+
+    .bento-2x1,
+    .bento-2x2 {
         grid-column: span 1;
+        /* Reset on mobile */
     }
 }
 
