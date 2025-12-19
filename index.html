@@ -278,7 +278,7 @@
         <section class="component-group">
             <h2>19. Fairy Dust Cursor</h2>
             <div class="showcase">
-                <p>Move your mouse around! ✨</p>
+                <button class="kawaii-btn" id="fairy-dust-toggle">Start Magic ✨</button>
             </div>
             <div class="code-block">
                 <pre><code>&lt;!-- JS required for cursor trail --&gt;</code></pre>
@@ -316,7 +316,23 @@
 
     <script>
         // Fairy Dust Cursor
+        let isFairyDustActive = false;
+        const fairyToggleBtn = document.getElementById('fairy-dust-toggle');
+
+        fairyToggleBtn.addEventListener('click', function () {
+            isFairyDustActive = !isFairyDustActive;
+            if (isFairyDustActive) {
+                this.textContent = "Stop Magic 🛑";
+                this.style.backgroundColor = "#ff5ca8"; // Active state color
+            } else {
+                this.textContent = "Start Magic ✨";
+                this.style.backgroundColor = ""; // Reverting to default
+            }
+        });
+
         document.addEventListener('mousemove', function (e) {
+            if (!isFairyDustActive) return;
+
             let body = document.querySelector('body');
             let particle = document.createElement('span');
             particle.classList.add('fairy-dust');
