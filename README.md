@@ -8,7 +8,8 @@ A collection of soft, aesthetic, and copy-pasteable UI components for adding a t
 ## ✨ Features
 - **Zero Dependencies**: Pure HTML/CSS for maximum compatibility.
 - **Pastel Palette**: Pre-configured with soft pinks, blues, and purples.
-- **Micro-interactions**: Cute hover and click effects.
+- **Micro-interactions**: Cute hover, click, and particle effects.
+- **New Components**: Fairy Dust Cursor, Confetti Button, and 3D Wobble Card.
 
 ## 📦 Installation
 
