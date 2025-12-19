@@ -320,8 +320,8 @@
             let body = document.querySelector('body');
             let particle = document.createElement('span');
             particle.classList.add('fairy-dust');
-            let x = e.offsetX;
-            let y = e.offsetY;
+            let x = e.clientX;
+            let y = e.clientY;
             particle.style.left = x + 'px';
             particle.style.top = y + 'px';
 

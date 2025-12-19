@@ -832,6 +832,7 @@ input:checked+.slider:before {
 }
 
 .confetti-btn {
+    position: relative;
     background: linear-gradient(45deg, #FF9A9E, #FECFEF);
     border: none;
     padding: 15px 30px;
@@ -842,7 +843,6 @@ input:checked+.slider:before {
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(255, 120, 196, 0.4);
     transition: transform 0.1s;
-    overflow: hidden;
 }
 
 .confetti-btn:active {
