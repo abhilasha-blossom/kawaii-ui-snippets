@@ -800,6 +800,105 @@ input:checked+.slider:before {
     background-color: #fff0f5;
 }
 
+/* --- 19. Fairy Dust Cursor --- */
+.fairy-dust {
+    position: fixed;
+    pointer-events: none;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    animation: fadeOut 1s linear forwards;
+    z-index: 9999;
+    box-shadow: 0 0 10px #fff, 0 0 20px var(--primary);
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+/* --- 20. Confetti Button --- */
+.confetti-container {
+    position: relative;
+    display: inline-block;
+}
+
+.confetti-btn {
+    background: linear-gradient(45deg, #FF9A9E, #FECFEF);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 120, 196, 0.4);
+    transition: transform 0.1s;
+    overflow: hidden;
+}
+
+.confetti-btn:active {
+    transform: scale(0.95);
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary);
+    animation: popConfetti 1s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes popConfetti {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(var(--tx), var(--ty)) rotate(720deg);
+    }
+}
+
+/* --- 21. 3D Wobble Card --- */
+.wobble-container {
+    perspective: 1000px;
+    display: inline-block;
+}
+
+.wobble-card {
+    width: 200px;
+    padding: 2rem;
+    background: linear-gradient(135deg, #fff0f5, #e6e6fa);
+    border-radius: 20px;
+    border: 3px solid white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    text-align: center;
+}
+
+.wobble-card h3 {
+    color: var(--primary);
+    transform: translateZ(20px);
+}
+
+.wobble-card p {
+    color: var(--text);
+    transform: translateZ(10px);
+}
+
 .petal:nth-child(9) {
     left: 90%;
     width: 16px;

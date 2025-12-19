@@ -275,6 +275,114 @@
             </div>
         </section>
 
+        <section class="component-group">
+            <h2>19. Fairy Dust Cursor</h2>
+            <div class="showcase">
+                <p>Move your mouse around! ✨</p>
+            </div>
+            <div class="code-block">
+                <pre><code>&lt;!-- JS required for cursor trail --&gt;</code></pre>
+            </div>
+        </section>
+
+        <section class="component-group">
+            <h2>20. Confetti Button</h2>
+            <div class="showcase">
+                <div class="confetti-container">
+                    <button class="confetti-btn" onclick="createConfetti(event)">Pop Confetti! 🎉</button>
+                </div>
+            </div>
+            <div class="code-block">
+                <pre><code>&lt;button onclick="createConfetti(event)"&gt;...&lt;/button&gt;</code></pre>
+            </div>
+        </section>
+
+        <section class="component-group">
+            <h2>21. 3D Wobble Card</h2>
+            <div class="showcase">
+                <div class="wobble-container">
+                    <div class="wobble-card" id="wobble">
+                        <h3>Woah! 🌀</h3>
+                        <p>I move with your mouse!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="code-block">
+                <pre><code>&lt;div class="wobble-card"&gt;...&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Fairy Dust Cursor
+        document.addEventListener('mousemove', function (e) {
+            let body = document.querySelector('body');
+            let particle = document.createElement('span');
+            particle.classList.add('fairy-dust');
+            let x = e.offsetX;
+            let y = e.offsetY;
+            particle.style.left = x + 'px';
+            particle.style.top = y + 'px';
+
+            let size = Math.random() * 10;
+            particle.style.width = 5 + size + 'px';
+            particle.style.height = 5 + size + 'px';
+
+            body.appendChild(particle);
+
+            setTimeout(function () {
+                particle.remove();
+            }, 1000);
+        });
+
+        // Confetti Button
+        function createConfetti(event) {
+            let btn = event.target;
+            let rect = btn.getBoundingClientRect();
+
+            for (let i = 0; i < 30; i++) {
+                let confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                // Random position within button
+                // This logic actually positions them relative to the button if container is relative
+                // But for simplicity let's append to button and overflow visible
+                btn.appendChild(confetti);
+
+                let xy = Math.random() > 0.5 ? 1 : -1;
+                let tx = Math.random() * 100 * xy;
+                let ty = Math.random() * 100 * xy - 50; // Tend upwards
+
+                confetti.style.setProperty('--tx', tx + 'px');
+                confetti.style.setProperty('--ty', ty + 'px');
+                confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                confetti.style.left = '50%';
+                confetti.style.top = '50%';
+
+                setTimeout(() => confetti.remove(), 1000);
+            }
+        }
+
+        // Wobble Card
+        const card = document.getElementById('wobble');
+        const container = document.querySelector('.wobble-container');
+
+        container.addEventListener('mousemove', (e) => {
+            let xAxis = (window.innerWidth / 2 - e.pageX) / 20;
+            let yAxis = (window.innerHeight / 2 - e.pageY) / 20;
+            card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        });
+
+        container.addEventListener('mouseenter', (e) => {
+            card.style.transition = 'none';
+        });
+
+        container.addEventListener('mouseleave', (e) => {
+            card.style.transition = 'all 0.5s ease';
+            card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+        });
+    </script>
+
 </body>
 
 </html>

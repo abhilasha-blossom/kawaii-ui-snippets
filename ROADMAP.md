@@ -24,6 +24,9 @@ This is our master plan to build the cutest UI library ever! Use this list to cr
 13. **Cloud Background**: Animated floating clouds.
 14. **Chibi Avatar**: A profile picture with a status indicator.
 15. **Sakura Rain**: Falling cherry blossom petals background effect.
+16. **Fairy Dust Cursor**: A trail of particles following the mouse.
+17. **Confetti Button**: A button that explodes with confetti on click.
+18. **3D Wobble Card**: A card that tilts in 3D space on hover.
 
 ## 📈 Trophy Boosting Guide
 - **Create an Issue** for each of these items.
