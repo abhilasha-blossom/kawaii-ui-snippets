@@ -192,7 +192,67 @@
             </div>
         </section>
 
-    </main>
+        <section class="component-group">
+            <h2>14. Sweet Progress Bar</h2>
+            <div class="showcase">
+                <div class="sweet-progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+            <div class="code-block">
+                <pre><code>&lt;div class="sweet-progress"&gt;...&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+
+        <section class="component-group">
+            <h2>15. Bread/Toast Notification</h2>
+            <div class="showcase">
+                <button class="kawaii-btn" onclick="showToast()">Show Toast 🍞</button>
+            </div>
+
+            <div id="toast" class="kawaii-toast">
+                <span>🍞</span> Notification Popped!
+            </div>
+
+            <div class="code-block">
+                <pre><code>&lt;div class="kawaii-toast"&gt;...&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+
+        <script>
+            function showToast() {
+                var toast = document.getElementById("toast");
+                toast.className = "kawaii-toast show";
+                setTimeout(function () { toast.className = toast.className.replace("show", ""); }, 3000);
+            }
+        </script>
+
+        <section class="component-group">
+            <h2>16. Cloud Background</h2>
+            <div class="showcase">
+                <div class="cloud-showcase">
+                    <div class="cloud c1"></div>
+                    <div class="cloud c2"></div>
+                    <div class="cloud c3"></div>
+                </div>
+            </div>
+            <div class="code-block">
+                <pre><code>&lt;div class="cloud"&gt;&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+
+        <section class="component-group">
+            <h2>17. Chibi Avatar</h2>
+            <div class="showcase">
+                <div class="chibi-avatar">
+                    <img src="girl.png" alt="Avatar">
+                    <div class="status-dot"></div>
+                </div>
+            </div>
+            <div class="code-block">
+                <pre><code>&lt;div class="chibi-avatar"&gt;...&lt;/div&gt;</code></pre>
+            </div>
+        </section>
 
 </body>
 
