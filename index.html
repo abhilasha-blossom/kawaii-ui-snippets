@@ -26,285 +26,309 @@
     </header>
 
     <main>
-        <div class="bento-grid">
+        <div class="shelves-container">
 
-            <!-- Category: INPUTS -->
-            <section class="component-group bento-1x1" data-category="inputs">
-                <h2>1. Bouncy Jelly Button</h2>
-                <div class="showcase">
-                    <button class="kawaii-btn">Click Me!</button>
-                </div>
-                <div class="code-block">
-                    <pre><code>&lt;button class="kawaii-btn"&gt;Click Me!&lt;/button&gt;</code></pre>
-                </div>
-            </section>
-
-            <section class="component-group bento-2x1" data-category="layout">
-                <h2>2. Soft Glassmorphism Card</h2>
-                <div class="showcase">
-                    <div class="glass-card">
-                        <h3>✨ Glass Magic ✨</h3>
-                        <p>This card looks like frosted glass!</p>
-                    </div>
-                </div>
-                <div class="code-block">
-                    <pre><code>&lt;div class="glass-card"&gt;...&lt;/div&gt;</code></pre>
-                </div>
-            </section>
-
-            <section class="component-group bento-1x1" data-category="inputs">
-                <h2>3. Neon Glow Toggle</h2>
-                <div class="showcase">
-                    <label class="neon-toggle">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <div class="code-block">
-                    <pre><code>&lt;label class="neon-toggle"&gt;...&lt;/label&gt;</code></pre>
-                </div>
-            </section>
-
-            <section class="component-group bento-1x1" data-category="decoration">
-                <h2>4. Pastel Badge</h2>
-                <div class="showcase">
-                    <span class="pastel-badge">New! ✨</span>
-                    <span class="pastel-badge blue">Cool ❄️</span>
-                </div>
-                <div class="code-block">
-                    <pre><code>&lt;span class="pastel-badge"&gt;New! ✨&lt;/span&gt;</code></pre>
-                </div>
-            </section>
-
-            <section class="component-group bento-1x1" data-category="decoration">
-                <h2>5. Sparkle Badge</h2>
-                <div class="showcase">
-                    <span class="sparkle-badge">Level Up! 💖</span>
-                </div>
-                <div class="code-block">
-                    <pre><code>&lt;span class="sparkle-badge"&gt;Level Up! 💖&lt;/span&gt;</code></pre>
-                </div>
-            </section>
-
-            <section class="component-group bento-1x1" data-category="inputs">
-                <h2>6. Pastel Input Field</h2>
-                <div class="showcase">
-                    <input type="text" class="pastel-input" placeholder="Type something cute...">
-                </div>
-                <div class="code-block">
-                    <pre><code>&lt;input type="text" class="pastel-input" placeholder="..."&gt;</code></pre>
-                </div>
-            </section>
-
-            <section class="component-group bento-1x1" data-category="inputs">
-                <h2>7. Heart Checkbox</h2>
-                <div class="showcase">
-                    <label class="heart-checkbox">
-                        <input type="checkbox">
-                        <span class="heart"></span>
-                    </label>
-                </div>
-                <div class="code-block">
-                    <pre><code>&lt;label class="heart-checkbox"&gt;...&lt;/label&gt;</code></pre>
-                </div>
-            </section>
-
-            <section class="component-group bento-1x1" data-category="inputs">
-                <h2>8. Floating Action Button</h2>
-                <div class="showcase">
-                    <button class="fab-btn">＋</button>
-                </div>
-                <div class="code-block">
-                    <pre><code>&lt;button class="fab-btn"&gt;＋&lt;/button&gt;</code></pre>
-                </div>
-            </section>
-
-            <section class="component-group bento-2x1" data-category="layout">
-                <h2>9. Rainbow Divider</h2>
-                <div class="showcase">
-                    <div class="rainbow-divider"></div>
-                </div>
-                <div class="code-block">
-                    <pre><code>&lt;div class="rainbow-divider"&gt;&lt;/div&gt;</code></pre>
-                </div>
-            </section>
-
-            <section class="component-group bento-2x1" data-category="decoration">
-                <h2>10. Typing Text Effect</h2>
-                <div class="showcase">
-                    <div class="typing-container">
-                        <span class="typing-text">Hello World! </span>
-                    </div>
-                </div>
-                <div class="code-block">
-                    <pre><code>&lt;span class="typing-text"&gt;Hello World!&lt;/span&gt;</code></pre>
-                </div>
-            </section>
-
-            <section class="component-group bento-2x1" data-category="layout">
-                <h2>11. Kawaii Modal</h2>
-                <div class="showcase">
-                    <button class="kawaii-btn"
-                        onclick="document.getElementById('kawaii-modal').style.display='flex'">Open
-                        Modal</button>
-                </div>
-
-                <div id="kawaii-modal" class="modal-overlay" style="display: none;"
-                    onclick="if(event.target === this) this.style.display='none'">
-                    <div class="kawaii-modal">
-                        <div class="modal-header">
-                            <h3>✨ Hello There! ✨</h3>
-                            <span class="close-btn"
-                                onclick="document.getElementById('kawaii-modal').style.display='none'">&times;</span>
+            <!-- Title for Section 1 -->
+            <div class="shelf-category">
+                <h2 class="shelf-title">✨ Buttons & Inputs <span style="font-size:1rem; opacity:0.6;">(Scroll ➡️)</span>
+                </h2>
+                <div class="shelf-row">
+                    <!-- 1. Bouncy Button -->
+                    <section class="component-group">
+                        <h3>1. Bouncy Jelly Button</h3>
+                        <div class="showcase">
+                            <button class="kawaii-btn">Click Me!</button>
                         </div>
-                        <div class="modal-body">
-                            <p>This is a super cute modal popup! 🌸</p>
-                            <p>You can put anything here.</p>
+                        <div class="code-block">
+                            <pre><code>&lt;button class="kawaii-btn"&gt;...&lt;/button&gt;</code></pre>
                         </div>
-                        <div class="modal-footer">
+                    </section>
+
+                    <!-- 3. Neon Toggle -->
+                    <section class="component-group">
+                        <h3>3. Neon Glow Toggle</h3>
+                        <div class="showcase">
+                            <label class="neon-toggle">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="code-block">
+                            <pre><code>&lt;label class="neon-toggle"&gt;...&lt;/label&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- 6. Pastel Input -->
+                    <section class="component-group">
+                        <h3>6. Pastel Input Field</h3>
+                        <div class="showcase">
+                            <input type="text" class="pastel-input" placeholder="Cute text...">
+                        </div>
+                        <div class="code-block">
+                            <pre><code>&lt;input class="pastel-input"&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- 7. Heart Checkbox -->
+                    <section class="component-group">
+                        <h3>7. Heart Checkbox</h3>
+                        <div class="showcase">
+                            <label class="heart-checkbox">
+                                <input type="checkbox">
+                                <span class="heart"></span>
+                            </label>
+                        </div>
+                        <div class="code-block">
+                            <pre><code>&lt;label class="heart-checkbox"&gt;...&lt;/label&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- 8. FAB -->
+                    <section class="component-group">
+                        <h3>8. Floating Action Btn</h3>
+                        <div class="showcase">
+                            <button class="fab-btn">＋</button>
+                        </div>
+                        <div class="code-block">
+                            <pre><code>&lt;button class="fab-btn"&gt;＋&lt;/button&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- 20. Confetti -->
+                    <section class="component-group">
+                        <h3>20. Confetti Button</h3>
+                        <div class="showcase">
+                            <div class="confetti-container">
+                                <button class="confetti-btn" onclick="createConfetti(event)">Pop 🎉</button>
+                            </div>
+                        </div>
+                        <div class="code-block">
+                            <pre><code>&lt;button onclick="..."&gt;Pop&lt;/button&gt;</code></pre>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Title for Section 2 -->
+            <div class="shelf-category">
+                <h2 class="shelf-title">🍱 Layout & Containers <span style="font-size:1rem; opacity:0.6;">(Scroll
+                        ➡️)</span></h2>
+                <div class="shelf-row">
+                    <!-- 2. Glass Card -->
+                    <section class="component-group shelf-wide">
+                        <h3>2. Soft Glassmorphism Card</h3>
+                        <div class="showcase">
+                            <div class="glass-card">
+                                <h3>✨ Glass Magic ✨</h3>
+                                <p>This card looks like frosted glass!</p>
+                            </div>
+                        </div>
+                        <div class="code-block">
+                            <pre><code>&lt;div class="glass-card"&gt;...&lt;/div&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- 9. Rainbow Divider -->
+                    <section class="component-group">
+                        <h3>9. Rainbow Divider</h3>
+                        <div class="showcase" style="width:100%">
+                            <div class="rainbow-divider"></div>
+                        </div>
+                        <div class="code-block">
+                            <pre><code>&lt;div class="rainbow-divider"&gt;&lt;/div&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- 11. Modal -->
+                    <section class="component-group">
+                        <h3>11. Kawaii Modal</h3>
+                        <div class="showcase">
                             <button class="kawaii-btn"
-                                onclick="document.getElementById('kawaii-modal').style.display='none'">Close</button>
+                                onclick="document.getElementById('kawaii-modal').style.display='flex'">Open</button>
                         </div>
-                    </div>
-                </div>
 
-                <div class="code-block">
-                    <pre><code>&lt;div class="kawaii-modal"&gt;...&lt;/div&gt;</code></pre>
-                </div>
-            </section>
-
-            <section class="component-group bento-1x1" data-category="decoration">
-                <h2>12. Cute Spinner</h2>
-                <div class="showcase">
-                    <div class="cute-spinner"></div>
-                </div>
-                <div class="code-block">
-                    <pre><code>&lt;div class="cute-spinner"&gt;&lt;/div&gt;</code></pre>
-                </div>
-            </section>
-
-            <section class="component-group bento-1x1" data-category="decoration">
-                <h2>13. Kawaii Tooltip</h2>
-                <div class="showcase">
-                    <span class="kawaii-tooltip" data-tooltip="So floaty! ☁️">
-                        Hover Me!
-                    </span>
-                </div>
-                <div class="code-block">
-                    <pre><code>&lt;span class="kawaii-tooltip" data-tooltip="..."&gt;Hover&lt;/span&gt;</code></pre>
-                </div>
-            </section>
-
-            <section class="component-group bento-2x1" data-category="layout">
-                <h2>14. Sweet Progress Bar</h2>
-                <div class="showcase">
-                    <div class="sweet-progress">
-                        <div class="progress-bar"></div>
-                    </div>
-                </div>
-                <div class="code-block">
-                    <pre><code>&lt;div class="sweet-progress"&gt;...&lt;/div&gt;</code></pre>
-                </div>
-            </section>
-
-            <section class="component-group bento-1x1" data-category="decoration">
-                <h2>15. Bread/Toast Notification</h2>
-                <div class="showcase">
-                    <button class="kawaii-btn" onclick="showToast()">Show Toast 🍞</button>
-                </div>
-
-                <div id="toast" class="kawaii-toast">
-                    <span>🍞</span> Notification Popped!
-                </div>
-
-                <div class="code-block">
-                    <pre><code>&lt;div class="kawaii-toast"&gt;...&lt;/div&gt;</code></pre>
-                </div>
-            </section>
-
-            <section class="component-group bento-2x1" data-category="layout">
-                <h2>16. Cloud Background</h2>
-                <div class="showcase">
-                    <div class="cloud-showcase">
-                        <div class="cloud c1"></div>
-                        <div class="cloud c2"></div>
-                        <div class="cloud c3"></div>
-                    </div>
-                </div>
-                <div class="code-block">
-                    <pre><code>&lt;div class="cloud"&gt;&lt;/div&gt;</code></pre>
-                </div>
-            </section>
-
-            <section class="component-group bento-1x1" data-category="decoration">
-                <h2>17. Chibi Avatar</h2>
-                <div class="showcase">
-                    <div class="chibi-avatar">
-                        <img src="girl.png" alt="Avatar">
-                        <div class="status-dot"></div>
-                    </div>
-                </div>
-                <div class="code-block">
-                    <pre><code>&lt;div class="chibi-avatar"&gt;...&lt;/div&gt;</code></pre>
-                </div>
-            </section>
-
-            <section class="component-group bento-2x2" data-category="layout">
-                <h2>18. Sakura Rain</h2>
-                <div class="showcase">
-                    <div class="sakura-rain">
-                        <div class="petal"></div>
-                        <div class="petal"></div>
-                        <div class="petal"></div>
-                        <div class="petal"></div>
-                        <div class="petal"></div>
-                        <div class="petal"></div>
-                        <div class="petal"></div>
-                        <div class="petal"></div>
-                        <div class="petal"></div>
-                    </div>
-                </div>
-                <div class="code-block">
-                    <pre><code>&lt;div class="sakura-rain"&gt;...&lt;/div&gt;</code></pre>
-                </div>
-            </section>
-
-            <section class="component-group bento-1x1" data-category="decoration">
-                <h2>19. Fairy Dust Cursor</h2>
-                <div class="showcase">
-                    <button class="kawaii-btn" id="fairy-dust-toggle">Start Magic ✨</button>
-                </div>
-                <div class="code-block">
-                    <pre><code>&lt;!-- JS required for cursor trail --&gt;</code></pre>
-                </div>
-            </section>
-
-            <section class="component-group bento-1x1" data-category="inputs">
-                <h2>20. Confetti Button</h2>
-                <div class="showcase">
-                    <div class="confetti-container">
-                        <button class="confetti-btn" onclick="createConfetti(event)">Pop Confetti! 🎉</button>
-                    </div>
-                </div>
-                <div class="code-block">
-                    <pre><code>&lt;button onclick="createConfetti(event)"&gt;...&lt;/button&gt;</code></pre>
-                </div>
-            </section>
-
-            <section class="component-group bento-2x1" data-category="layout">
-                <h2>21. 3D Wobble Card</h2>
-                <div class="showcase">
-                    <div class="wobble-container">
-                        <div class="wobble-card" id="wobble">
-                            <h3>Woah! 🌀</h3>
-                            <p>I move with your mouse!</p>
+                        <div id="kawaii-modal" class="modal-overlay" style="display: none;"
+                            onclick="if(event.target === this) this.style.display='none'">
+                            <div class="kawaii-modal">
+                                <div class="modal-header">
+                                    <h3>✨ Hello! ✨</h3>
+                                    <span class="close-btn"
+                                        onclick="document.getElementById('kawaii-modal').style.display='none'">&times;</span>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Super cute popup! 🌸</p>
+                                </div>
+                                <div class="modal-footer"><button class="kawaii-btn"
+                                        onclick="document.getElementById('kawaii-modal').style.display='none'">Close</button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        <div class="code-block">
+                            <pre><code>&lt;div class="kawaii-modal"&gt;...&lt;/div&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- 14. Progress Bar -->
+                    <section class="component-group">
+                        <h3>14. Sweet Progress</h3>
+                        <div class="showcase" style="width:100%">
+                            <div class="sweet-progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                        <div class="code-block">
+                            <pre><code>&lt;div class="sweet-progress"&gt;...&lt;/div&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- 16. Cloud Background -->
+                    <section class="component-group shelf-wide">
+                        <h3>16. Cloud Background</h3>
+                        <div class="showcase">
+                            <div class="cloud-showcase">
+                                <div class="cloud c1"></div>
+                                <div class="cloud c2"></div>
+                                <div class="cloud c3"></div>
+                            </div>
+                        </div>
+                        <div class="code-block">
+                            <pre><code>&lt;div class="cloud"&gt;&lt;/div&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- 18. Sakura Rain -->
+                    <section class="component-group shelf-wide">
+                        <h3>18. Sakura Rain</h3>
+                        <div class="showcase">
+                            <div class="sakura-rain">
+                                <div class="petal"></div>
+                                <div class="petal"></div>
+                                <div class="petal"></div>
+                                <div class="petal"></div>
+                                <div class="petal"></div>
+                                <div class="petal"></div>
+                            </div>
+                        </div>
+                        <div class="code-block">
+                            <pre><code>&lt;div class="sakura-rain"&gt;...&lt;/div&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- 21. Wobble Card -->
+                    <section class="component-group shelf-wide">
+                        <h3>21. 3D Wobble Card</h3>
+                        <div class="showcase">
+                            <div class="wobble-container">
+                                <div class="wobble-card" id="wobble">
+                                    <h3>Woah! 🌀</h3>
+                                    <p>I move with your mouse!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="code-block">
+                            <pre><code>&lt;div class="wobble-card"&gt;...&lt;/div&gt;</code></pre>
+                        </div>
+                    </section>
                 </div>
-                <div class="code-block">
-                    <pre><code>&lt;div class="wobble-card"&gt;...&lt;/div&gt;</code></pre>
+            </div>
+
+            <!-- Title for Section 3 -->
+            <div class="shelf-category">
+                <h2 class="shelf-title">🎀 Decorations & Effects <span style="font-size:1rem; opacity:0.6;">(Scroll
+                        ➡️)</span></h2>
+                <div class="shelf-row">
+                    <!-- 4. Pastel Badge -->
+                    <section class="component-group">
+                        <h3>4. Pastel Badge</h3>
+                        <div class="showcase">
+                            <span class="pastel-badge">New! ✨</span>
+                            <span class="pastel-badge blue">Cool ❄️</span>
+                        </div>
+                        <div class="code-block">
+                            <pre><code>&lt;span class="pastel-badge"&gt;...&lt;/span&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- 5. Sparkle Badge -->
+                    <section class="component-group">
+                        <h3>5. Sparkle Badge</h3>
+                        <div class="showcase">
+                            <span class="sparkle-badge">Level Up! 💖</span>
+                        </div>
+                        <div class="code-block">
+                            <pre><code>&lt;span class="sparkle-badge"&gt;...&lt;/span&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- 10. Typing Text -->
+                    <section class="component-group shelf-wide">
+                        <h3>10. Typing Text Effect</h3>
+                        <div class="showcase">
+                            <div class="typing-container"><span class="typing-text">Hello World! </span></div>
+                        </div>
+                        <div class="code-block">
+                            <pre><code>&lt;span class="typing-text"&gt;...&lt;/span&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- 12. Spinner -->
+                    <section class="component-group">
+                        <h3>12. Cute Spinner</h3>
+                        <div class="showcase">
+                            <div class="cute-spinner"></div>
+                        </div>
+                        <div class="code-block">
+                            <pre><code>&lt;div class="cute-spinner"&gt;&lt;/div&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- 13. Tooltip -->
+                    <section class="component-group">
+                        <h3>13. Kawaii Tooltip</h3>
+                        <div class="showcase">
+                            <span class="kawaii-tooltip" data-tooltip="So floaty! ☁️">Hover Me!</span>
+                        </div>
+                        <div class="code-block">
+                            <pre><code>&lt;span class="kawaii-tooltip"&gt;...&lt;/span&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- 15. Toast -->
+                    <section class="component-group">
+                        <h3>15. Bread/Toast</h3>
+                        <div class="showcase"><button class="kawaii-btn" onclick="showToast()">Show 🍞</button></div>
+                        <div id="toast" class="kawaii-toast"><span>🍞</span> Notification!</div>
+                        <div class="code-block">
+                            <pre><code>&lt;div class="kawaii-toast"&gt;...&lt;/div&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- 17. Avatar -->
+                    <section class="component-group">
+                        <h3>17. Chibi Avatar</h3>
+                        <div class="showcase">
+                            <div class="chibi-avatar">
+                                <img src="girl.png" alt="Avatar">
+                                <div class="status-dot"></div>
+                            </div>
+                        </div>
+                        <div class="code-block">
+                            <pre><code>&lt;div class="chibi-avatar"&gt;...&lt;/div&gt;</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- 19. Fairy Dust -->
+                    <section class="component-group">
+                        <h3>19. Fairy Dust Cursor</h3>
+                        <div class="showcase"><button class="kawaii-btn" id="fairy-dust-toggle">Start Magic ✨</button>
+                        </div>
+                        <div class="code-block">
+                            <pre><code>&lt;!-- JS required for cursor --&gt;</code></pre>
+                        </div>
+                    </section>
                 </div>
-            </section>
+            </div>
+
         </div>
     </main>
 
